@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,65 +14,81 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
-    <main class="main-content">
-      <div class="container">
-        <div class="top-wrapper">
+  <main class="main-content">
+    <div class="container">
+
         <h1 class="title-heading">Our Pricing</h1>
-      </div>
+        <form class="form" action="https:/.echo.htmlacademy.ru" method="GET">
+          <div class="switch">
+            <input class="switch-input-annually" style="display: none" type="radio" name="payment_period" value="annually" id="annually-payment-radio">
+            <input class="switch-input-monthly" style="display: none"  type="radio" name="payment_period" value="monthly" id="monthly-payment-radio" checked>
+            <label class="switch-label" for="annually-payment-radio">Annually</label>
+            <div class="switch-control">
+           <div class="switch-circle">
+            <label class="switch-control-annually" for="annually-payment-radio"></label>
+            <label class="switch-control-monthly" for="monthly-payment-radio"></label>
+           </div>
+            </div>
+            <label class="switch-label" for="monthly-payment-radio">Monthly</label>
+          </div>
+        </form>
 
       <!-- CARD-WRAPPER -->
-    <div class="card-wrapper">
-    <div class="card-basic main-card">
-     <h2 class="feature-heading">Basic</h2>
-     <div class="feature-plan-block">
-     <span class="plan-currency">$</span>
-     19.99
-     </div>
-     <ul class="feature-list">
-       <li class="feature-item">500 GB Storage</li>
-       <li class="feature-item">2 Users Allowed</li>
-       <li class="feature-item">Send up to 3 GB</li>
-     </ul>
-    <span class="main-link-block"> <a class="main-link" href="#">learn more</a>
-  </span>
-    </div>
+      <div class="card-wrapper">
+        <div class="main-card card-basic" data-payment-annully="199.99" data-payment-monthly="19.99">
+          <h2 class="feature-heading">Basic</h2>
+          <div class="feature-plan-block">
+            <span class="plan-currency">$</span>
+            <span class="pricing-plan-value">19.99</span>
+          </div>
+          <ul class="feature-list">
+            <li class="feature-item">500 GB Storage</li>
+            <li class="feature-item">2 Users Allowed</li>
+            <li class="feature-item">Send up to 3 GB</li>
+          </ul>
+          <span class="main-link-block"> <a class="main-link" href="#">learn more</a>
+          </span>
+        </div>
 
-    <!-- CARD-PROFESSIONAL-->
-    <div class="card-professional">
-      <h2 class="feature-heading feature-heading-professional">Professional</h2>
-     <div class="feature-plan-block plan-currency-professional">
-     <span class="plan-currency">$</span>
-     24.99
-     </div>
-     <ul class="feature-list">
-       <li class="feature-item">1 TB Storage</li>
-       <li class="feature-item">5 Users Allowed</li>
-       <li class="feature-item">Send up to 10 GB</li>
-     </ul>
-     <span class="main-link-block"><a class="professional-card-link" href="#">learn more</a>
-     </span>
-    </div>
+        <!-- CARD-PROFESSIONAL-->
+        <div class="main-card card-professional" data-payment-annully="249.99" data-payment-monthly="24.99">
+          <h2 class="feature-heading feature-heading-professional">Professional</h2>
+          <div class="feature-plan-block plan-currency-professional">
+            <span class="plan-currency">$</span>
+            <span class="pricing-plan-value">24.99</span>
+          </div>
+          <ul class="feature-list">
+            <li class="feature-item">1 TB Storage</li>
+            <li class="feature-item">5 Users Allowed</li>
+            <li class="feature-item">Send up to 10 GB</li>
+          </ul>
+          <span class="main-link-block"><a class="professional-card-link" href="#">learn more</a>
+          </span>
+        </div>
 
-      <!-- CARD-MASTER-->
-      <div class="card-master main-card">
-        <h2 class="feature-heading">Master</h2>
-       <div class="feature-plan-block">
-       <span class="plan-currency">$</span>
-       39.99
-       </div>
-       <ul class="feature-list">
-         <li class="feature-item">2 TB Storage</li>
-         <li class="feature-item">10 Users Allowed</li>
-         <li class="feature-item">Send up to 20 GB</li>
-       </ul>
-       <span class="main-link-block"><a class="main-link" href="#">learn more</a>
-       </span>
+        <!-- CARD-MASTER-->
+        <div class="main-card card-master" data-payment-annully="399.99" data-payment-monthly="39.99">
+          <h2 class="feature-heading">Master</h2>
+          <div class="feature-plan-block">
+            <span class="plan-currency">$</span>
+            <span class="pricing-plan-value">39.99</span>
+          </div>
+          <ul class="feature-list">
+            <li class="feature-item">2 TB Storage</li>
+            <li class="feature-item">10 Users Allowed</li>
+            <li class="feature-item">Send up to 20 GB</li>
+          </ul>
+          <span class="main-link-block"><a class="main-link" href="#">learn more</a>
+          </span>
+        </div>
       </div>
     </div>
-        </div>
-    </main>
+  </main>
 
+  <script src="js/main.js"></script>
 </body>
+
 </html>

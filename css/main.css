@@ -61,20 +61,80 @@ img {
   padding-top: 71px;
   padding-bottom: 71px;
 }
-.top-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 64px;
-}
 
 .title-heading {
-  display: inline-block;
   margin: 0;
+  margin-bottom: 40px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.switch-label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgba(110, 114, 142, 0.5);
+  cursor: pointer;
+}
+
+.switch-label:hover {
+  color: #6E728E;
+}
+
+.switch-control {
+  width: 56px;
+  height: 32px;
+  padding: 4px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-radius: 16px;
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  position: relative;
+}
+
+.switch-control:hover {
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #C3C5F3 100%);
+}
+
+.switch-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: var(--text-color);
+  transition: margin 0.2s ease;
+}
+
+.switch-control-annually,
+.switch-control-monthly {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.switch-input-annually:checked ~ .switch-control .switch-control-monthly,
+.switch-input-monthly:checked ~ .switch-control .switch-control-annually {
+   z-index: 5;
+}
+
+
+.switch-input-monthly:checked ~ .switch-control {
+  background-color: rgba(196,198,244);
+}
+
+.switch-input-monthly:checked ~ .switch-control .switch-circle {
+  margin-left: 24px;
 }
 
 .card-wrapper {
@@ -87,7 +147,7 @@ img {
 
 .main-card {
   position: relative;
-  background-color: #fff;
+  background-color: var(--text-color);
   box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
   border-radius: 10px 0px 0px 10px;
   width: 350px;
@@ -164,7 +224,8 @@ img {
 .main-link {
    width: 100%;
    display: inline-block;
-   padding: 10px ;
+   padding: 14px;
+   line-height: 16px;
    text-align: center;
    flex-shrink: 0;
    background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
@@ -183,13 +244,33 @@ img {
   color: var(--primary);
 }
 
+.professional-card-link {
+  width: 100%;
+  display: inline-block;
+  padding: 14px;
+  line-height: 16px;
+  text-align: center;
+  flex-shrink: 0;
+  background-color: var(--text-color);
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary);
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+.professional-card-link:hover {
+  background-image: none;
+  border: 1px solid var(--text-color);
+  background-color: #858AE7;
+  color: var(--text-color);
+}
+
 .main-link:active {
   opacity: 0.8;
-
 }
 
-.basic-card-link {
-}
 .card-professional {
   width: 350px;
   color: var(--text-color);
@@ -203,41 +284,8 @@ img {
   color: var(--text-color);
 }
 
-.professional-card-link {
-  width: 100%;
-  display: inline-block;
-  padding: 10px ;
-  text-align: center;
-  flex-shrink: 0;
-  background-color: var(--text-color);
-  border-radius: 6px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--primary);
-  border: 1px solid transparent;
-  transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
-}
-
-.professional-card-link:hover {
-  width: 100%;
-  display: inline-block;
-  padding: 10px ;
-  text-align: center;
-  flex-shrink: 0;
-  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
-  border-radius: 6px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--text-color);
-  border: 1px solid transparent;
-  transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease, border 0.5s ease;
-}
-
 .card-master {
   width: 350px;
-}
-
-.master-card-link {
 }
 
 .feature-line {
